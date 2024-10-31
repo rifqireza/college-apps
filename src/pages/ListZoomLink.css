@@ -1,0 +1,9 @@
+.list-zoom-link { 
+  overflow: auto; 
+  max-height: 100vh;
+  padding-bottom: 90px;
+}
+
+.list-zoom-link::-webkit-scrollbar {
+  display: none;
+}

@@ -1,10 +1,11 @@
 import { Col, Row } from "antd";
 import ZoomCard from "./components/ZoomCard";
 import { ZoomCardType } from "./components/ZoomCard.interface";
+import "./ListZoomLink.css"
 
 export default function ListZoomLink() {
   return (
-    <Row style={{ overflow: "auto", height: '100vh', scrollbarWidth: 'none' }} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+    <Row className="list-zoom-link" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
       {zoomItems.map((item) => (
         <Col style={{ marginBottom: '30px' }}>
           <ZoomCard {...item}  />

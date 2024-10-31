@@ -7,11 +7,13 @@ export default function ZoomCard(props: ZoomCardType) {
   return (
     <Card
       style={{ width: 300 }}
+      bordered={true}
       cover={
         <img
+          onClick={() => window.open(props.zoomLink, '_blank')}
           height={"160px"}
-          alt="example"
-          style={{ objectFit: "cover" }}
+          alt={props.roomName}
+          style={{ objectFit: "cover", cursor: 'pointer' }}
           src={props.imgSrc}
         />
       }
@@ -19,7 +21,7 @@ export default function ZoomCard(props: ZoomCardType) {
         <SettingOutlined key="setting" />,
         <EditOutlined key="edit" />,
         <Tooltip title={"Go To " + props.roomName}>
-          <ExportOutlined onClick={() => window.open(props.zoomLink, '_blank') } />
+          <ExportOutlined onClick={() => window.open(props.zoomLink, '_blank')} />
         </Tooltip>
       ]}
     >

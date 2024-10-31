@@ -19,7 +19,7 @@ export default function ZoomCard(props: ZoomCardType) {
         <SettingOutlined key="setting" />,
         <EditOutlined key="edit" />,
         <Tooltip title={"Go To " + props.roomName}>
-          <ExportOutlined onClick={() => window.open(props.zoomLink, '_blank') } />,
+          <ExportOutlined onClick={() => window.open(props.zoomLink, '_blank') } />
         </Tooltip>
       ]}
     >

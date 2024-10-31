@@ -4,7 +4,7 @@ import { ZoomCardType } from "./components/ZoomCard.interface";
 
 export default function ListZoomLink() {
   return (
-    <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+    <Row style={{ overflow: "auto", height: '100vh', scrollbarWidth: 'none' }} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
       {zoomItems.map((item) => (
         <Col style={{ marginBottom: '30px' }}>
           <ZoomCard {...item}  />

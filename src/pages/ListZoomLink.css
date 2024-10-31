@@ -1,7 +1,7 @@
 .list-zoom-link { 
   overflow: auto; 
   max-height: 100vh;
-  padding-bottom: 90px;
+  padding-bottom: 300px
 }
 
 .list-zoom-link::-webkit-scrollbar {

@@ -1,0 +1,83 @@
+.year-select-container {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  padding: 7px 12px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+  transition: border 0.2s ease-in-out;
+}
+
+.year-display {
+  color: #555;
+  transition: color 0.2s ease-in-out;
+}
+
+.year-popup {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 140px;
+  z-index: 10;
+  animation: fadeIn 0.3s ease-in-out;
+  padding: 8px;
+  max-height: 200px;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.year-popup::-webkit-scrollbar {
+  display: none; /* Chrome & Safari */
+}
+
+.popup-header {
+  font-size: 14px;
+  font-weight: bold;
+  color: #007bff;
+  text-align: center;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 8px;
+}
+
+.year-options {
+  display: flex;
+  flex-direction: column;
+  max-height: 180px;
+}
+
+.year-option {
+  padding: 6px;
+  text-align: center;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.year-option:hover {
+  background: #f3f3f3;
+}
+
+.year-option.selected {
+  background: #ffefef;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

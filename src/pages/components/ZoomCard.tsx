@@ -7,7 +7,6 @@ export default function ZoomCard(props: ZoomCardType) {
   return (
     <Card
       style={{ width: 300 }}
-      bordered={true}
       cover={
         <img
           onClick={() => window.open(props.zoomLink, '_blank')}

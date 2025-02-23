@@ -2,8 +2,16 @@ import { Col, Row } from "antd";
 import ZoomCard from "./components/ZoomCard";
 import { ZoomCardType } from "./components/ZoomCard.interface";
 import "./ListZoomLink.css"
+import AddressFormWithTabs from "../component/SelectAddress";
+import { NPWPForm } from "../component/InputNPWP";
+import { useRef } from "react";
+import TimeRangePicker from "../component/range-time-picker/RangeTimePicker";
+import YearSelect from "../component/select-year/SelectYear";
 
 export default function ListZoomLink() {
+  const startTimeRef = useRef(null);
+  const endTimeRef = useRef(null);
+
   return (
     <Row className="list-zoom-link" gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
       {zoomItems.map((item) => (
@@ -11,6 +19,13 @@ export default function ListZoomLink() {
           <ZoomCard {...item}  />
         </Col>
       ))}
+
+      <TimeRangePicker />
+
+      <YearSelect placeholder="Pilih Tahun" />
+      <AddressFormWithTabs />
+      <NPWPForm />
+
     </Row>
   )
 }
